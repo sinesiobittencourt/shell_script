@@ -10,11 +10,8 @@ VERSAO="0.1b"
 
 #clear
 
-printf "
-# Author       : Sinesio Bittencourt
-# Email        : contato@sinesio.com.br
-# Version      : v$VERSAO ( beta )
-"
+printf "# Version      : v$VERSAO ( beta )"
+
 echo -e "\n[!] - Bem vindo.\n"
 
 read -p "Por favor informe o dominio a ser analisado: " DOMAIN
