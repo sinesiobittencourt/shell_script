@@ -5,7 +5,6 @@
 # Email        : contato@sinesio.com.br
 # Info         : Script to check cPanel CPU and Memory usage for a specific user
 # Project      : http://git.sinesio.com.br
-
 ##################################################################
 VERSAO="0.1b"
 
