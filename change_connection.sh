@@ -3,7 +3,7 @@
 ##################################################################
 # Author       : Sinesio Bittencourt
 # Email        : contato@sinesio.com.br
-# Info         : Change the Connection
+# Info         : Change the Connection (cPanel)
 # Project      : http://git.sinesio.com.br or https://github.com/sinesiobittencourt/
 ##################################################################
 VERSAO="0.1b"
