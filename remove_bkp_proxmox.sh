@@ -14,6 +14,7 @@
 
 # Modify in file BACKUP your SYSTEM (EX: /HOME/BKPS....) 
 LISTA=ls /var/lib/vz/$YOUR_BACKUPS/dump/ | find /var/lib/vz/$YOUR_BACKUPS/dump/ -mtime +7
+YOUR_BACKUPS=YOUR_BACKUP_HERE
 
 echo -e "\nPressione control+C para caso queira cancelar o processo... Sera deletado $LISTA \n" 
 
@@ -21,4 +22,4 @@ sleep 5
 
 for S in `find /var/lib/vz/$YOUR_BACKUPS/dump/ -mtime +7`;do rm $S; done
 
-echo -e "Deleted system file"
+echo -e "Deleted system files in $YOUR_BACKUPS"
