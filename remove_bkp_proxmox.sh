@@ -1,5 +1,12 @@
 #!/bin/bash
 
+##################################################################
+# Author       : Sinesio Bittencourt
+# Email        : contato@sinesio.com.br
+# Info         : 
+# Project      : http://git.sinesio.com.br or https://github.com/sinesiobittencourt/
+##################################################################
+
 #for S in `find . -mtime +20`; do rm -r $S; done
 
 #pegar os LOGS
