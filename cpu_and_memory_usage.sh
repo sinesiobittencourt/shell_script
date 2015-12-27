@@ -4,7 +4,7 @@
 # Author       : Sinesio Bittencourt
 # Email        : contato@sinesio.com.br
 # Info         : Script to check cPanel CPU and Memory usage for a specific user
-# Project      : http://git.sinesio.com.br
+# Project      : http://git.sinesio.com.br or https://github.com/sinesiobittencourt/
 ##################################################################
 VERSAO="0.1b"
 
