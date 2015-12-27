@@ -7,6 +7,7 @@
 # Project      : http://git.sinesio.com.br or https://github.com/sinesiobittencourt/
 ##################################################################
 VERSAO="0.1b"
+#tput cup 
 
 #clear
 
