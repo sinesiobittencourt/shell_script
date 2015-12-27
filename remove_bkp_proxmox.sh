@@ -21,4 +21,4 @@ sleep 5
 
 for S in `find /var/lib/vz/$YOUR_BACKUPS/dump/ -mtime +7`;do rm $S; done
 
-echo -e "BKP Deletada"
+echo -e "Deleted system file"
