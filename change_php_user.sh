@@ -5,5 +5,7 @@
 # Info         : 
 # Project      : http://git.sinesio.com.br or https://github.com/sinesiobittencourt/
 ##################################################################
+#TO-DO 
+# erificar se já tem [! "AddType application/x-httpd-php53 .php"] tes de adicionar 
 
-for USER in `ls | oi $OWNER_HERE | cut -d- -f1`; do cd /home/$USER/www/; grep "OLD_SERVER_HERE" * -R | awk -F: '{print $1}' | xargs -n1 sed -i 's/OLD_SERVER_HERE/NEW_SERVER_HERE/g' $1;  done
+for USER in `ls | oi USER_OWNER | cut -d- -f1`; do echo "AddType application/x-httpd-php53 .php" >> /home/$USER/.htaccess; done
