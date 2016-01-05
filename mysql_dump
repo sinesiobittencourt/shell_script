@@ -1,0 +1,16 @@
+#!/bin/bash
+
+##################################################################
+# Author       : Sinesio Bittencourt
+# Email        : contato@sinesio.com.br
+# Info         : 
+# Project      : http://git.sinesio.com.br or https://github.com/sinesiobittencourt/
+##################################################################
+
+mysqldump -h"host_de_origem_mysql" -u"usuario" -p"senha" base_de_dados > nome_da_base.sql
+
+mysql -h"br30.hostgator.com.br" -u"usuario" -p"senha" base_de_dados < nome_da_base.sql
+
+for S in $(ls | cut -d. -f1); 
+  do mysql $USER_BANCO_$S < $S.sql; 
+done
