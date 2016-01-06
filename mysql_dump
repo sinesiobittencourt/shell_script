@@ -11,6 +11,4 @@ mysqldump -h"host_de_origem_mysql" -u"usuario" -p"senha" base_de_dados > nome_da
 
 mysql -h"br30.hostgator.com.br" -u"usuario" -p"senha" base_de_dados < nome_da_base.sql
 
-for S in $(ls | cut -d. -f1); 
-  do mysql $USER_BANCO_$S < $S.sql; 
-done
+for S in $(ls | cut -d. -f1); do mysql $USER_BANCO_$S < $S.sql; done
