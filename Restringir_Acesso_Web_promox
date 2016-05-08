@@ -1,0 +1,11 @@
+#RESTRINGIR O ACESSO A PVEPROXY
+#Criar um novo arquivo /etc/default/pveproxy com o seguinte conteúdo:
+
+#/etc/default/pveproxy
+ALLOW_FROM="127.0.0.1"
+DENY_FROM="all"
+POLICY="allow"
+
+#Reinicie pveproxy para que as alterações entrem em vigor:
+
+/etc/init.d/pveproxy restart
