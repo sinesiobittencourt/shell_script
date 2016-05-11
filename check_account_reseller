@@ -1,0 +1,9 @@
+Check if account is reseller
+cut -d: -f1  /var/cpanel/resellers | grep -o $USER_ACCOUNT
+
+List all cpanels under reseller
+grep $USER_ACCOUNT /etc/trueuserowners | cut -d: -f1
+
+Count all cpanels under reseller
+grep $USER_ACCOUNT /etc/trueuserowners | cut -d: -f1 | wc -l
+
