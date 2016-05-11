@@ -1,0 +1,9 @@
+Show all IP's on server
+ip addr show eth0
+
+Show all IP's on server (IP's only - except primary)
+cut -d':' -f1 /etc/ips | sort -u
+
+Count all IP's on server (except primary)
+cut -d':' -f1 /etc/ips | sort -u | wc -l
+
