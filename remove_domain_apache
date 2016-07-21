@@ -1,0 +1,50 @@
+#!/bin/bash
+
+##################################################################
+# Author       : Sinesio Bittencourt
+# Email        : contato@sinesio.com.br
+# Info         : 
+# Version      : 0.1 ( beta )
+# Project      : http://git.sinesio.com.br
+##################################################################
+VERSAO="0.1b"
+
+clear
+
+printf "
+# Author       : Sinesio Bittencourt
+# Email        : contato@sinesio.com.br
+# Info         : 
+# Version      : v$VERSAO ( beta )
+
+"
+
+echo -e "\n[!] - Bem vindo Gator.\n"
+
+read -p "Informe o DOMINIO: "		DOMINIO
+
+echo -e "\n"
+
+
+# CHECA SE OS VALORES FORAM INSERIDOS CORREETAMENTE
+if [[ -z DOMINIO ]]
+then
+       	echo -e "[!] - Nenhum valor pode ficar em branco, por favor tente novamente."
+	exit
+else
+	echo "[+] - Verificando o DOMINIO"
+	echo "Execultando comando"
+	/scripts/whoowns $DOMINIO
+	#echo $DOMINIO
+	/scripts/killdns $DOMINIO
+	/scripts/killvhost $DOMINIO 
+	/scripts/cleandns $DOMINIO
+	
+	sleep 3
+
+echo "[+] - Limpando cache"
+	
+	/scripts/updateuserdomains; 
+	/scripts/update_db_cache
+
+fi
