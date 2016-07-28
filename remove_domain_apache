@@ -44,8 +44,8 @@ then
        	echo -e "[!] - Nenhum valor pode ficar em branco, por favor tente novamente."
 	exit
 else
-	echo "${verd}[OK]${rese} - Verificando o DOMINIO"
-	echo "${OK}${rese} - Execultando comando"
+	printf "${verd}[OK]${rese} - Verificando o DOMINIO"
+	printf "${OK} - Execultando comando ${rese}"
 	/scripts/whoowns $DOMINIO
 	#echo $DOMINIO
 	/scripts/killdns $DOMINIO
