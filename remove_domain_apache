@@ -39,6 +39,7 @@ else
 echo "[+] - Limpando cache"
 	
 	/scripts/updateuserdomains; 
-	/scripts/update_db_cache
+	/scripts/update_db_cache;
+	echo "Domínio >>> "$DOMINIO " <<< removido com SUCESSO!"
 
 fi
