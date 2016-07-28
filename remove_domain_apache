@@ -20,6 +20,9 @@ bran='\E[0;37m'   # White
 bold='\033[37;4;1m' #BOLD
 und='\033[37;4m'
 rese=$(tput sgr0) # No color.
+OK="${verd}[OK]${rese}";                                                                                                                                                                                                                                                       
+ATT="${amar}[!]${rese}";                                                                                                                                                                                                                                                       
+FAIL="${verm}[!]${rese}"; 
 
 VERSAO="0.1b"
 #limpar tela
@@ -41,8 +44,8 @@ then
        	echo -e "[!] - Nenhum valor pode ficar em branco, por favor tente novamente."
 	exit
 else
-	echo "[+] - Verificando o DOMINIO"
-	echo "[+] - Execultando comando"
+	echo "${verd}[OK]${rese} - Verificando o DOMINIO"
+	echo "${OK}${rese} - Execultando comando"
 	/scripts/whoowns $DOMINIO
 	#echo $DOMINIO
 	/scripts/killdns $DOMINIO
