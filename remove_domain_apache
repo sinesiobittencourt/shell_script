@@ -41,12 +41,12 @@ echo -e "\n"
 # CHECA SE OS VALORES FORAM INSERIDOS CORREETAMENTE
 if [[ -z DOMINIO ]]
 then
-       	echo -e "[!] - Nenhum valor pode ficar em branco, por favor tente novamente."
+       	echo -e "${FAIL} - Nenhum valor pode ficar em branco, por favor tente novamente."
 	exit
 else
 	#printf \n${OK} "- Execultando comando" ${rese}\n\n
-	printf "\n${OK} - Verificando o DOMINIO {rese}\n\n"
-	printf "\n${OK} - Execultando comando {rese}\n\n" 
+	printf "\n${OK} - Verificando o DOMINIO ${rese}\n\n"
+	printf "\n${OK} - Execultando comando ${rese}\n\n" 
 	
 	/scripts/whoowns $DOMINIO
 	#echo $DOMINIO
@@ -55,7 +55,7 @@ else
 	/scripts/cleandns $DOMINIO
 	
 	sleep 3
-echo "[+] - Limpando cache"
+echo -e "[+] - Limpando cache"
 	
 	/scripts/updateuserdomains; 
 	/scripts/update_db_cache;
