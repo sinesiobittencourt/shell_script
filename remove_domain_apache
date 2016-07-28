@@ -55,6 +55,6 @@ echo "[+] - Limpando cache"
 	/scripts/updateuserdomains; 
 	/scripts/update_db_cache;
 	sleep 2
-echo -e "Domínio ${verd}>>>${rese} "$DOMINIO " <<< removido com SUCESSO!"
+echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"
 
 fi
