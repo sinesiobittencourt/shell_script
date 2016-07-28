@@ -7,6 +7,20 @@
 # Version      : 0.1 ( beta )
 # Project      : http://git.sinesio.com.br
 ##################################################################
+
+## BASHCSS
+pret='\E[0;30m'   # Black
+verm='\E[0;31m'   # Red
+verd='\E[0;32m'   # Green
+amar='\E[0;33m'   # Yellow
+azul='\E[0;34m'   # Blue
+mage='\E[0;35m'   # Magenta
+cian='\E[0;36m'   # Ciano
+bran='\E[0;37m'   # White
+bold='\033[37;4;1m' #BOLD
+und='\033[37;4m'
+rese=$(tput sgr0) # No color.
+
 VERSAO="0.1b"
 #limpar tela
 #clear
@@ -41,6 +55,6 @@ echo "[+] - Limpando cache"
 	/scripts/updateuserdomains; 
 	/scripts/update_db_cache;
 	sleep 2
-echo "Domínio >>> "$DOMINIO " <<< removido com SUCESSO!"
+echo "Domínio ${verd}>>>${rese} "$DOMINIO " <<< removido com SUCESSO!"
 
 fi
