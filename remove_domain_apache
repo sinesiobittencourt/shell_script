@@ -9,14 +9,9 @@
 ##################################################################
 
 ## BASHCSS
-pret='\E[0;30m'   # Black
 verm='\E[0;31m'   # Red
 verd='\E[0;32m'   # Green
 amar='\E[0;33m'   # Yellow
-azul='\E[0;34m'   # Blue
-mage='\E[0;35m'   # Magenta
-cian='\E[0;36m'   # Ciano
-bran='\E[0;37m'   # White
 bold='\033[37;4;1m' #BOLD
 und='\033[37;4m'
 rese=$(tput sgr0) # No color.
@@ -38,6 +33,8 @@ echo -e "\n[!] - Bem vindo Gator.\n"
 read -p "Informe o DOMINIO: "		DOMINIO
 echo -e "\n"
 
+
+
 # CHECA SE OS VALORES FORAM INSERIDOS CORREETAMENTE
 if [[ -z $DOMINIO ]]
 then
@@ -55,7 +52,7 @@ else
 	/scripts/cleandns $DOMINIO\n
 	
 	sleep 3
-	printf "\n${OK} - Limpando cache do servidor\n\n" 
+	printf "\n${OK} - mpando cache do servidor\n\n" 
 	
 	/scripts/updateuserdomains; 
 	/scripts/update_db_cache;
