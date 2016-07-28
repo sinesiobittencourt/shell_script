@@ -57,7 +57,7 @@ else
 	/scripts/cleandns $DOMINIO\n
 	
 	sleep 3
-echo -e "${ok} - Limpando cache do servidor"
+	printf "\n${OK} - mpando cache do servidor\n\n" 
 	
 	/scripts/updateuserdomains; 
 	/scripts/update_db_cache;
