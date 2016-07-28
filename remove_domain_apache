@@ -38,6 +38,8 @@ echo -e "\n[!] - Bem vindo Gator.\n"
 read -p "Informe o DOMINIO: "		DOMINIO
 echo -e "\n"
 
+
+
 # CHECA SE OS VALORES FORAM INSERIDOS CORREETAMENTE
 if [[ -z $DOMINIO ]]
 then
@@ -46,16 +48,16 @@ then
 else
 	#printf \n${OK} "- Execultando comando" ${rese}\n\n
 	printf "\n${OK} - Verificando o DOMINIO\n"
-	printf "\n${OK} - Execultando comando ${rese}\n" 
+	printf "\n${OK} - Execultando comando\n\n" 
 	
-	/scripts/whoowns $DOMINIO
+	/scripts/whoowns $DOMINIO\n
 	#echo $DOMINIO
-	/scripts/killdns $DOMINIO
-	/scripts/killvhost $DOMINIO 
-	/scripts/cleandns $DOMINIO
+	/scripts/killdns $DOMINIO\n
+	/scripts/killvhost $DOMINIO\n
+	/scripts/cleandns $DOMINIO\n
 	
 	sleep 3
-echo -e "[+] - Limpando cache"
+echo -e "${ok} - Limpando cache do servidor"
 	
 	/scripts/updateuserdomains; 
 	/scripts/update_db_cache;
