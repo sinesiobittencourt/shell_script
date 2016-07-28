@@ -44,9 +44,10 @@ then
        	echo -e "[!] - Nenhum valor pode ficar em branco, por favor tente novamente."
 	exit
 else
-	printf "${verd}[OK]${rese} - Verificando o DOMINIO"
-	printf \n${OK} "- Execultando comando" ${rese}\n\n
-	printf "\n${OK} - Your vdns version is up to date ${verd}$VERSION${rese}\n\n"
+	#printf \n${OK} "- Execultando comando" ${rese}\n\n
+	printf "\n${OK} - Verificando o DOMINIO {rese}\n\n"
+	printf "\n${OK} - Execultando comando {rese}\n\n"
+	
 	/scripts/whoowns $DOMINIO
 	#echo $DOMINIO
 	/scripts/killdns $DOMINIO
