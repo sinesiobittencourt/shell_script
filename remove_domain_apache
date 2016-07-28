@@ -39,9 +39,8 @@ read -p "Informe o DOMINIO: "		DOMINIO
 echo -e "\n"
 
 # CHECA SE OS VALORES FORAM INSERIDOS CORREETAMENTE
-if [[ -z DOMINIO ]]
+if [[ -z $DOMINIO ]]
 then
-	[[! -e DOMINIO ]]
        	echo -e "${FAIL} - Nenhum valor pode ficar em branco, por favor tente novamente."
 	exit
 else
