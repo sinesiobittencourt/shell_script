@@ -45,7 +45,8 @@ then
 	exit
 else
 	printf "${verd}[OK]${rese} - Verificando o DOMINIO"
-	printf ${OK} "- Execultando comando" ${rese}
+	printf \n${OK} "- Execultando comando" ${rese}\n\n
+	printf "\n${OK} - Your vdns version is up to date ${verd}$VERSION${rese}\n\n"
 	/scripts/whoowns $DOMINIO
 	#echo $DOMINIO
 	/scripts/killdns $DOMINIO
