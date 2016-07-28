@@ -8,23 +8,18 @@
 # Project      : http://git.sinesio.com.br
 ##################################################################
 VERSAO="0.1b"
-
-clear
+#limpar tela
+#clear
 
 printf "
 # Author       : Sinesio Bittencourt
 # Email        : contato@sinesio.com.br
 # Info         : 
 # Version      : v$VERSAO ( beta )
-
-"
-
+       "
 echo -e "\n[!] - Bem vindo Gator.\n"
-
 read -p "Informe o DOMINIO: "		DOMINIO
-
 echo -e "\n"
-
 
 # CHECA SE OS VALORES FORAM INSERIDOS CORREETAMENTE
 if [[ -z DOMINIO ]]
@@ -33,7 +28,7 @@ then
 	exit
 else
 	echo "[+] - Verificando o DOMINIO"
-	echo "Execultando comando"
+	echo "[+] - Execultando comando"
 	/scripts/whoowns $DOMINIO
 	#echo $DOMINIO
 	/scripts/killdns $DOMINIO
@@ -41,7 +36,6 @@ else
 	/scripts/cleandns $DOMINIO
 	
 	sleep 3
-
 echo "[+] - Limpando cache"
 	
 	/scripts/updateuserdomains; 
