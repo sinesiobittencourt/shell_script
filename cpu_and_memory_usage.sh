@@ -11,7 +11,7 @@ VERSAO="0.1b"
 
 #clear
 
-printf "# Version      : v$VERSAO ( beta )"
+echo "# Version      : v$VERSAO ( beta )"
 
 echo -e "\n[!] - Bem vindo.\n"
 
