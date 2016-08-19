@@ -37,14 +37,14 @@ echo -e "\n"
 
 
 # CHECA SE OS VALORES FORAM INSERIDOS CORREETAMENTE
-if [[ -z $DOMINIO ]]
+if [[ -z $DOMINIO || $OWNER ]]
 then
        	echo -e "${FAIL} - Nenhum valor pode ficar em branco, por favor tente novamente."
 	exit
 else
 	#printf \n${OK} "- Execultando comando" ${rese}\n\n
 	printf "\n${OK} - Verificando o DOMINIO\n"
-	printf "\n${OK} - Execultando comando\n\n" 
+	printf "\n${amar} - Execultando comando\n\n" 
 	
 	/scripts/whoowns $DOMINIO\n
 	#echo $DOMINIO
@@ -58,8 +58,9 @@ else
 	/scripts/updateuserdomains; 
 	/scripts/update_db_cache;
 	sleep 2
-echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"
-	/root/bin/ui $OWNER\n
+echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"\n
+	
 echo -e "Domínio >>> "${verd}$OWNER${rese}" <<< Verificando se o domínio foi removido o ADD!"
+	/root/bin/ui $OWNER\n
 
 fi
