@@ -47,7 +47,7 @@ else
 	printf "\n${amar} - Execultando comando\n\n" 
 	
 	/scripts/whoowns $DOMINIO\n
-	echo $OWNER
+	#echo $OWNER
 	/scripts/killdns $DOMINIO\n
 	/scripts/killvhost $DOMINIO\n
 	/scripts/cleandns $DOMINIO\n
