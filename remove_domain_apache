@@ -56,7 +56,8 @@ else
 	printf "\n${OK} - mpando cache do servidor\n\n" 
 	
 	/scripts/updateuserdomains; 
-	/scripts/update_db_cache;
+	/scripts/updateuserdatacache
+	#/scripts/update_db_cache;
 	sleep 2
 echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"\n
 	
