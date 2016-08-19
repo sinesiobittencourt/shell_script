@@ -58,5 +58,7 @@ else
 	/scripts/update_db_cache;
 	sleep 2
 echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"
+	/root/bin/ui $DOMINIO
+echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< Verificando se o domínio foi removido o ADD!"
 
 fi
