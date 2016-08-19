@@ -30,7 +30,8 @@ printf "
 # Version      : v$VERSAO ( beta )
        "
 echo -e "\n[!] - Bem vindo Gator.\n"
-read -p "Informe o DOMINIO: "		DOMINIO
+read -p "Informe o DOMINIO a ser REMOVIDO: "		DOMINIO
+read -p "Informe o DOMINIO PRINCIPAL(owner) da conta: "		OWNER
 echo -e "\n"
 
 
@@ -58,7 +59,7 @@ else
 	/scripts/update_db_cache;
 	sleep 2
 echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"
-	/root/bin/ui $DOMINIO\n
+	/root/bin/ui $OWNER\n
 echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< Verificando se o domínio foi removido o ADD!"
 
 fi
