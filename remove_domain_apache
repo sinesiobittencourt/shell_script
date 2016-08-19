@@ -37,7 +37,7 @@ echo -e "\n"
 
 
 # CHECA SE OS VALORES FORAM INSERIDOS CORREETAMENTE
-if [[ -z $DOMINIO || $OWNER ]]
+if [[ -z $DOMINIO ]]
 then
        	echo -e "${FAIL} - Nenhum valor pode ficar em branco, por favor tente novamente."
 	exit
@@ -47,7 +47,7 @@ else
 	printf "\n${amar} - Execultando comando\n\n" 
 	
 	/scripts/whoowns $DOMINIO\n
-	#echo $DOMINIO
+	echo $OWNER
 	/scripts/killdns $DOMINIO\n
 	/scripts/killvhost $DOMINIO\n
 	/scripts/cleandns $DOMINIO\n
