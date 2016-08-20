@@ -62,6 +62,6 @@ else
 echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"\n
 	
 echo -e "Domínio >>> "${verd}$OWNER${rese}" <<< Verificando se o domínio foi removido o ADD!"
-	/root/bin/ui $OWNER\n
+	/root/bin/ui $OWNER
 
 fi
