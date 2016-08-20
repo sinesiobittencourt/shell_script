@@ -44,7 +44,7 @@ then
 else
 	#printf \n${OK} "- Execultando comando" ${rese}\n\n
 	printf "\n${OK} - Verificando o DOMINIO\n"
-	printf "\n${ATT} - Execultando comando\n\n" 
+	printf "\n${ATT} - Execultando comando\n" 
 	${ATT}
 	/scripts/whoowns $DOMINIO\n
 	#echo $OWNER
@@ -53,7 +53,7 @@ else
 	/scripts/cleandns $DOMINIO\n
 	
 	sleep 3
-	printf "\n${OK} - mpando cache do servidor\n\n" 
+	printf "\n${OK} - Limpando cache do servidor\n" 
 	
 	/scripts/updateuserdomains; 
 	/scripts/updateuserdatacache
