@@ -59,6 +59,11 @@ else
 	/scripts/updateuserdatacache
 	#/scripts/update_db_cache;
 	sleep 2
+	#Apaga as linhas que contem o dominio informado na variável $DOMINIO
+	#sed -e "/linha/d" $DOMINIO
+
+	#find /etc/localdomains/$DOMINIO -type f -exec sed -i -e '/'$DOMINIO'/d' {} \;
+	
 echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"\n
 	
 echo -e "Domínio >>> "${FAIL}$OWNER${rese}" <<< Verificando se o domínio foi removido o ADDONS!"
