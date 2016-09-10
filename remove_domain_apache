@@ -56,7 +56,7 @@ else
 	printf "\n${OK} - Limpando cache do servidor\n" 
 	
 	/scripts/updateuserdomains; 
-	/scripts/updateuserdatacache
+	/scripts/updateuserdatacache;
 	#/scripts/update_db_cache;
 	sleep 2
 	### Em desenvolvimento ###
