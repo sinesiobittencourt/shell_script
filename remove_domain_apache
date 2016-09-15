@@ -45,7 +45,7 @@ else
 	#printf \n${OK} "- Execultando comando" ${rese}\n\n
 	printf "\n${OK} - Verificando o DOMINIO\n"
 	printf "\n${ATT} - Execultando comando\n" 
-	${ATT}
+
 	/scripts/whoowns $DOMINIO\n
 	#echo $OWNER
 	/scripts/killdns $DOMINIO\n
