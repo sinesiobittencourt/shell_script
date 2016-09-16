@@ -70,5 +70,5 @@ echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"
 \n	
 echo -e "Domínio >>> "${FAIL}$OWNER${rese}" <<< Verificando se o domínio foi removido o ADDONS!"
 	/root/bin/ui -d $OWNER
-
+ 
 fi
