@@ -1,13 +1,17 @@
 #!/bin/bash
 
-chattr -ia /etc/motd;
-chattr -ia /etc/rc.d/rc.local;
+yes | chattr -ia /etc/motd;
+yes | chattr -ia /etc/rc.d/rc.local;
 
 
-mv /etc/.motd /etc/motd;
-mv /etc/rc.d/.rc.local /etc/rc.d/rc.local;
+yes | mv /etc/.motd /etc/motd;
+yes | mv /etc/rc.d/.rc.local /etc/rc.d/rc.local;
+
 
 for SEMAPHORES in `ipcs -s | grep nobody | awk '{print $2}'` ; do ipcrm sem $SEMAPHORES > /dev/null ; done
 
-/etc/init.d/httpd start; /etc/init.d/firewall start
+/etc/init.d/httpd start; 
+/etc/init.d/firewall start;
+
+echo "OK";
 
