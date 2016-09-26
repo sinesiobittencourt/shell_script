@@ -60,10 +60,21 @@ else
 	#/scripts/update_db_cache;
 	sleep 2
 	### Em desenvolvimento ###
+	#/root/bin/ui -d $OWNER
+	
+#if [[! -z ]]
+#then
+       	#echo -e "${FAIL} - Dominio Ainda consta nos arquivos. Removendo..."
+	#ui -d | egrep 'Addon: sinesio.com.br|Sub: peo2015.sinesio.com.br'
+	
+	
 	#Apaga as linhas que contem o dominio informado na variável $DOMINIO
 	#sed -e "/linha/d" $DOMINIO
 
 	#find /etc/localdomains/$DOMINIO -type f -exec sed -i -e '/'$DOMINIO'/d' {} \;
+
+	
+	#exit
 	### Em desenvolvimento - FIM ###
 	
 echo -e "Domínio >>> "${verd}$DOMINIO${rese}" <<< removido com SUCESSO!"	
