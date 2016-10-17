@@ -6,6 +6,7 @@ APACHE=$(/usr/local/apache/bin/apachectl -v|head -1|cut -d: -f2|awk '{print $1}'
 PHP=$(/usr/local/bin/php -v |head -1|awk '{print $2}')
 PERL=$(/usr/bin/perl -v|head -n2|awk '{print $4}'|sed -e'/^$/d')
 MYSQL=$(/usr/bin/mysql --version|awk '{print $5}'|sed -e 's/,//g')
+
 CPANEL=$(/usr/local/cpanel/cpanel -V|awk '{print $1}')
 GD=$(/usr/local/bin/php -i|grep GD| grep '('|awk '{print $5}'|sed -e 's/(//g')
 PERL=$(/usr/bin/perl -v|head -2|sed -e'/^$/d'|awk '{print $4}'|sed -e 's/v//g')
@@ -29,6 +30,7 @@ echo -e "
 Apache:\t\t$APACHE
 PHP:\t\t$PHP
 MySQL:\t\t$MYSQL
+----------------------
 cPanel:\t\t$CPANEL
 GD LIB:\t\t$GD
 Perl:\t\t$PERL
