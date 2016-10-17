@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 echo " Check Server "
 
 APACHE=$(/usr/local/apache/bin/apachectl -v|head -1|cut -d: -f2|awk '{print $1}'|cut -d/ -f2)
@@ -45,5 +43,4 @@ Python:\t\t$PYTHON
 ImageMagick\t\t$IMAGEMAGICK\tImageMagick PHP Mod:\t\t$IMAGICKMOD
 GhostScript:\t$GHOSTSCRIPT
 rsync:\t\t$RSYNC
-RoudCube:\t$ROUDCUBE\tSquireMail:\t$SQUIREMAIL\tHorde:\t$HORDE
-"
+RoudCube:\t$ROUDCUBE\tSquireMail:\t$SQUIREMAIL\tHorde:\t$HORDE "
