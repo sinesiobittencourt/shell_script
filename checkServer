@@ -55,12 +55,11 @@ Perl:\t\t$PERL
 IonCube:\t$IONCUBE
 gnuPG:\t\t$GNUPG
 ----------------------
-ROR:\t\t$RUBY
+RUBY:\t\t$RUBY
 Curl:\t\t$CURL
 Perl:\t\t$PERL
 Python:\t\t$PYTHON
 ---------------------
-
 
 rsync:\t\t$RSYNC
 RoudCube:\t$ROUDCUBE\tSquireMail:\t$SQUIREMAIL\tHorde:\t$HORDE "
