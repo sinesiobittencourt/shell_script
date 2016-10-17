@@ -44,8 +44,8 @@ ROUDCUBE=$(cat /var/cpanel/roundcube/version)
 SQUIREMAIL=$(cat /var/cpanel/squirrelmail/version)
 HORDE=$(cat /var/cpanel/horde/version)
 
+echo -e "Apache:"\t\t ${verd}$APACHE${rose}"
 echo -e "
-Apache:\t\t ${verd}$APACHE${rose}
 PHP:\t\t$PHP
 MySQL:\t\t$MYSQL
 ----------------------
