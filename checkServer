@@ -1,5 +1,19 @@
 #!/bin/bash
 
+## BASHCSS
+pret='\E[0;30m'   # Black
+verm='\E[0;31m'   # Red
+verd='\E[0;32m'   # Green
+amar='\E[0;33m'   # Yellow
+azul='\E[0;34m'   # Blue
+mage='\E[0;35m'   # Magenta
+cian='\e[1m'   # Ciano
+bran='\E[0;37m'   # White
+rese=$(tput sgr0) # No color.
+OK="${verd}[OK]${rese}";
+ATT="${amar}[!]${rese}";
+FAIL="${verm}[!]${rese}";
+
 echo " Check Server "
 
 APACHE=$(/usr/local/apache/bin/apachectl -v|head -1|cut -d: -f2|awk '{print $1}'|cut -d/ -f2)
@@ -17,7 +31,8 @@ GNUPG=$(/usr/bin/gpg2 --version|head -1|awk '{print $3}')
 RUBY=$(/usr/bin/ruby --version|awk '{print $2}')
 CURL=$(/usr/bin/curl --version|head -1|awk '{print $2}')
 PERL=$(/usr/bin/perl -version| head -2|sed -e'/^$/d'|awk '{print $4}'|sed -e 's/v//g')
-PYTHON=$(rpm -qa|grep python-|egrep -v "python-[a-zA-Z]|rpm|newt|lib"|cut -d '-' -f2)
+#PYTHON=$(rpm -qa|grep python-|egrep -v "python-[a-zA-Z]|rpm|newt|lib"|cut -d '-' -f2)
+PYTHON=$(rpm -qa| python -V)
 
 #IMAGEMAGICK=$(/usr/local/bin/php -i|grep image|awk '{print $5}'|head -1|cut -d '-' -f1)
 #IMAGICKMOD=$(/usr/local/bin/php -i | grep "imagick module version" | awk '{print $5}')
