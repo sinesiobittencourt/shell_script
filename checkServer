@@ -35,17 +35,21 @@ PHP:\t\t$PHP
 MySQL:\t\t$MYSQL
 ----------------------
 cPanel:\t\t$CPANEL
-GD LIB:\t\t$GD
+----------------------
+#GD LIB:\t\t$GD
 Perl:\t\t$PERL
 IonCube:\t$IONCUBE
 gnuPG:\t\t$GNUPG
-GD:\t\t$GD
-OpenSSL:\t$OPENSSL
+----------------------
+#GD:\t\t$GD
+#OpenSSL:\t$OPENSSL
 ROR:\t\t$RUBY
 Curl:\t\t$CURL
 Perl:\t\t$PERL
 Python:\t\t$PYTHON
-ImageMagick\t\t$IMAGEMAGICK\tImageMagick PHP Mod:\t\t$IMAGICKMOD
-GhostScript:\t$GHOSTSCRIPT
+---------------------
+#ImageMagick\t\t$IMAGEMAGICK\tImageMagick PHP Mod:\t\t$IMAGICKMOD
+#GhostScript:\t$GHOSTSCRIPT
+
 rsync:\t\t$RSYNC
 RoudCube:\t$ROUDCUBE\tSquireMail:\t$SQUIREMAIL\tHorde:\t$HORDE "
