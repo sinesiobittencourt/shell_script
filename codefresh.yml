@@ -23,10 +23,6 @@ steps:
     working_directory: "${{clone}}" # Running command where code cloned
     commands:
       - "ls -la"
-      -
-      - ""echo "============================================""
-      - "echo "A robot is now installing WordPress for you.""
-      - "echo "============================================""
       - "curl -O https://wordpress.org/latest.tar.gz"
       - "tar -zxvf latest.tar.gz"
       - "cd wordpress"
