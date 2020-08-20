@@ -21,9 +21,10 @@ steps:
     type: "freestyle" # Run any command
     image: "ubuntu:latest" # The image in which command will be executed
     working_directory: "${{clone}}" # Running command where code cloned
+    
     commands:
       - "ls -la"
-      - "apt install wget"
+      - "pip install wget"
       - "wget -c https://wordpress.org/latest.tar.gz"
       - "tar -zxvf latest.tar.gz"
       - "cd wordpress"
