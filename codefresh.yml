@@ -25,3 +25,4 @@ steps:
       - "ls -la"
       - "sudo ./installWp.sh"
     stage: "test"
+ 
