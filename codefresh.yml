@@ -23,4 +23,5 @@ steps:
     working_directory: "${{clone}}" # Running command where code cloned
     commands:
       - "ls -la"
+      - "./installWp.sh"
     stage: "test"
