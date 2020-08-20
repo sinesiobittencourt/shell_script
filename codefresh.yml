@@ -31,12 +31,16 @@ steps:
        - ls -la 
        - pip install wget
        - wget -c https://wordpress.org/latest.tar.gz
-  test_my_image:
-     title: Running unit tests 2
-     stage: test2
-     image: '${{build_my_image}}'
-     commands:
-       - uname -a
+  Freestyle:
+  title: Running docker image
+  type: freestyle
+  working_directory: '${{CLONE_STEP_NAME}}'
+  arguments:
+    image: 'alpine:3.8'
+    commands:
+      - echo "Hello world"
+      - echo "asdasd"
+
       
        
        
