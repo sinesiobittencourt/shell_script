@@ -4,6 +4,8 @@ stages:
  - prepare
  - build
  - test
+ - test2
+ 
 steps:
   main_clone:
     title: Cloning main repository...
@@ -29,7 +31,7 @@ steps:
        - ls -la 
        - pip install wget
        - wget -c https://wordpress.org/latest.tar.gz
-  test_my_image2:
+  test_my_image:
      title: Running unit tests 2
      stage: test2
      image: '${{build_my_image}}'
