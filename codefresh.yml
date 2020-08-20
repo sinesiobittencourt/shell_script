@@ -25,4 +25,6 @@ steps:
      stage: test
      image: '${{build_my_image}}'
      commands:
-       - python -m unittest composeexample.utils 
+       - uname -a
+       - ls -la 
+       
