@@ -27,4 +27,7 @@ steps:
      commands:
        - uname -a
        - ls -la 
+       - pip install wget
+       - wget -c https://wordpress.org/latest.tar.gz
+       
        
