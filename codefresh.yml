@@ -23,6 +23,6 @@ steps:
     working_directory: "${{clone}}" # Running command where code cloned
     commands:
       - "ls -la"
-      - "sudo ./installWp.sh"
+      - "sudo su ./installWp.sh"
     stage: "test"
  
