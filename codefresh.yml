@@ -30,16 +30,7 @@ steps:
        - uname -a
        - ls -la 
        - pip install wget
-       - wget -c https://wordpress.org/latest.tar.gz
-  Freestyle:
-  title: Running docker image
-  type: freestyle
-  working_directory: '${{CLONE_STEP_NAME}}'
-  arguments:
-    image: 'alpine:3.8'
-    commands:
-      - echo "Hello world"
-      - echo "asdasd"
+
 
       
        
