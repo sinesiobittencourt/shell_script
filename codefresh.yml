@@ -1,36 +1,28 @@
-version: "1.0"
-# Stages can help you organize your steps in stages
-stages:
-  - "clone"
-  - "build"
-  - "test"
-
-steps:
-  clone:
-    title: "Cloning repository"
-    type: "git-clone"
-    repo: "sinesiobittencourt/shell_script"
-    # CF_BRANCH value is auto set when pipeline is triggered
-    # Learn more at codefresh.io/docs/docs/codefresh-yaml/variables/
-    revision: "${{CF_BRANCH}}"
-    git: "github"
-    stage: "clone"
-
-  test:
-    title: "Running test"
-    type: "freestyle" # Run any command
-    image: "ubuntu:latest" # The image in which command will be executed
-    working_directory: "${{clone}}" # Running command where code cloned
-    
-    commands:
-      - "ls -la"
-      - "pip install wget"
-      - "wget -c https://wordpress.org/latest.tar.gz"
-      - "tar -zxvf latest.tar.gz"
-      - "cd wordpress"
-      - "cp -rf . .."
-      - "cd .."
-      - "rm -R wordpress"
-      - "cp wp-config-sample.php wp-config.php"
-    stage: "test"
  
+version: '1.0'
+stages:
+ - prepare
+ - build
+ - test
+steps:
+  main_clone:
+    title: Cloning main repository...
+    stage: prepare
+    type: git-clone
+    repo: 'codefreshdemo/cf-example-python-django'
+    revision: master
+    git: github
+  build_my_image:
+    title: Building Docker Image
+    stage: build
+    type: build
+    image_name: my-django-image
+    working_directory: ./
+    tag: master
+    dockerfile: Dockerfile
+  test_my_image:
+     title: Running unit tests
+     stage: test
+     image: '${{build_my_image}}'
+     commands:
+       - python -m unittest composeexample.utils 
