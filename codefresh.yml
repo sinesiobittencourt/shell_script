@@ -23,6 +23,7 @@ steps:
     working_directory: "${{clone}}" # Running command where code cloned
     commands:
       - "ls -la"
+      - "apt install wget"
       - "wget -c https://wordpress.org/latest.tar.gz"
       - "tar -zxvf latest.tar.gz"
       - "cd wordpress"
