@@ -32,7 +32,7 @@ steps:
   test_my_image2:
      title: Running unit tests 2
      stage: test2
-     image: '${{build_my_image2}}'
+     image: '${{build_my_image}}'
      commands:
        - uname -a
       
