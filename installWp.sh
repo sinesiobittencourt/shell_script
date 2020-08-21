@@ -56,6 +56,6 @@ rm latest.tar.gz
 #remove bash script
 rm wp.sh
 echo "========================="
-echo "Installation is complete."
+echo "Hey! Installation is complete. _O/"
 echo "========================="
 fi
