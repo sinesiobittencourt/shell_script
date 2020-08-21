@@ -18,6 +18,8 @@ else
 echo "============================================"
 echo "A robot is now installing WordPress for you."
 echo "============================================"
+#TO-DO
+#ADD Magento and OpenCart
 #download wordpress
 curl -O https://wordpress.org/latest.tar.gz
 #unzip wordpress
