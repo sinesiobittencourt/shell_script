@@ -1,0 +1,16 @@
+
+-----Install Xrdp-------
+
+sudo apt-get update -y
+sudo apt-get install xrdp -y
+sudo apt-get install xfce4 -y
+sudo apt-get install xfce4-terminal -y
+sudo apt-get install gnome-icon-theme-full tango-icon-theme -y
+sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n xfce-session \n' /etc/xrdp/startwm.sh
+sudo ufw allow 3389/tcp
+sudo /etc/init.d/xrdp restart
+
+-----Install firefox-----
+
+
+sudo apt install firefox -y
