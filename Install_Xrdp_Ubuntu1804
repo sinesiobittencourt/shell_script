@@ -14,3 +14,8 @@ sudo /etc/init.d/xrdp restart
 
 
 sudo apt install firefox -y
+
+
+-----Setting up RDP with Xfce-----
+sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
+/etc/init.d/xrdp restart
