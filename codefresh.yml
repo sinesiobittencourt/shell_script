@@ -11,14 +11,14 @@ steps:
     title: Cloning main repository...
     stage: prepare
     type: git-clone
-    repo: 'codefreshdemo/cf-example-python-django'
+    repo: 'alpine:3.8'
     revision: master
     git: github
   build_my_image:
     title: Building Docker Image
     stage: build
     type: build
-    image_name: my-django-image
+    image_name: alpine
     working_directory: ./
     tag: master
     dockerfile: Dockerfile
