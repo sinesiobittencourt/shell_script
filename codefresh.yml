@@ -17,7 +17,7 @@ steps:
     title: Building Docker Image
     stage: build
     type: build
-    image_name: alpine/git:latest
+    image_name: 'alpine/git:latest' 
     working_directory: ./
     tag: master
     dockerfile: Dockerfile
