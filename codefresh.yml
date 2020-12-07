@@ -1,35 +1,16 @@
- 
 version: '1.0'
-stages:
- - main_clone
- - build_my_image
- - test_my_image
- 
 steps:
-  main_clone:
-    title: Cloning main repository...
-    stage: prepare
-    type: git-clone
-    repo: 'sinesiobittencourt/shell_script'
-    revision: master
-    git: github
-  build_my_image:
-    title: Building Docker Image
-    stage: build
-    type: build
-    image_name: 'alpine/git:latest' 
-    working_directory: ./
-    tag: master
-    dockerfile: Dockerfile
-  test_my_image:
-     title: Running unit tests
-     stage: test
-     image: '${{build_my_image}}'
-     commands:
-       - uname -a
-       - ls -la 
-       - pip install wget
-
+    main_clone:
+        title: 'Cloning main repository...'
+        type: git-clone
+        repo: 'sinesiobittencourt/shell_script'
+        revision: '${{CF_REVISION}}'
+        git: my-git-provider
+    PrintFileList:
+        title: 'Listing files'
+        image: alpine:latest
+        commands:
+            - 'ls -l'
 
       
        
