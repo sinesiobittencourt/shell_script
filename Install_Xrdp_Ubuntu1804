@@ -23,3 +23,5 @@ sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
 
  
  docker run -d -it -p 000.000.00.000:3390 --name=v2 --restart=always -v ubuntu_v2_data:/data v2
+
+Jogando no CI
