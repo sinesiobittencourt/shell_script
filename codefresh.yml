@@ -1,9 +1,9 @@
  
 version: '1.0'
 stages:
- - prepare
- - build
- - lista
+ - main_clone
+ - build_my_image
+ - test_my_image
  
 steps:
   main_clone:
