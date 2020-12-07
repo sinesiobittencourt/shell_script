@@ -20,4 +20,6 @@ steps:
     working_directory: "${{clone}}" 
     commands:
       - "ls -la"
+      - "chmod 600 *"
+      - "ls -la"     
     stage: "test"
