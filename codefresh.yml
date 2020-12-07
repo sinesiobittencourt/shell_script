@@ -11,7 +11,7 @@ steps:
     title: Cloning main repository...
     stage: prepare
     type: git-clone
-    repo: 'alpine:3.8'
+    repo: 'alpine/git:latest'
     revision: master
     git: github
   build_my_image:
