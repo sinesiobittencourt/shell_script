@@ -3,22 +3,21 @@ version: '1.0'
 stages:
  - prepare
  - build
- - test
- - test2
+ - lista
  
 steps:
   main_clone:
     title: Cloning main repository...
     stage: prepare
     type: git-clone
-    repo: 'alpine/git:latest'
+    repo: 'sinesiobittencourt/shell_script'
     revision: master
     git: github
   build_my_image:
     title: Building Docker Image
     stage: build
     type: build
-    image_name: alpine
+    image_name: alpine/git:latest
     working_directory: ./
     tag: master
     dockerfile: Dockerfile
