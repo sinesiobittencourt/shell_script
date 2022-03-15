@@ -9,7 +9,7 @@ sudo apt-get install gnome-icon-theme-full tango-icon-theme -y
 sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n xfce-session \n' /etc/xrdp/startwm.sh
 sudo apt install ufw -y
 sudo ufw allow 3389/tcp
-sudo ufw allow 3390/tcp
+firewall-cmd --add-port=3389/tcp --permanent firewall-cmd --reload
 sudo /etc/init.d/xrdp restart
 
 -----Install firefox-----
@@ -19,7 +19,7 @@ sudo apt install firefox -y
 
 
 -----Setting up RDP with Xfce change port for 3390-----
-sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
+sed -i 's/port=3389/port=3395/g' /etc/xrdp/xrdp.ini
 /etc/init.d/xrdp restart
 
 
@@ -31,3 +31,7 @@ Jogando no CI
 RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
+
+
+ufw allow 3395/tcp
+
