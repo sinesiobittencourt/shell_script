@@ -1,21 +1,21 @@
 
 -----Install Xrdp-------
 
-sudo apt-get update -y
-sudo apt-get install xrdp -y
-sudo apt-get install xfce4 -y
-sudo apt-get install xfce4-terminal -y
-sudo apt-get install gnome-icon-theme-full tango-icon-theme -y
-sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n xfce-session \n' /etc/xrdp/startwm.sh
-sudo apt install ufw -y
-sudo ufw allow 3389/tcp
+apt-get update -y && apt-get install xrdp -y && apt-get install xfce4 -y
+
+apt-get install xfce4-terminal -y && apt-get install gnome-icon-theme-full tango-icon-theme -y
+
+sed -i.bak '/fi/a #xrdp multiple users configuration \n xfce-session \n' /etc/xrdp/startwm.sh
+apt install ufw -y && ufw allow 3389/tcp && install firewalld -y && apt install firewalld -y 
+
 firewall-cmd --add-port=3389/tcp --permanent firewall-cmd --reload
-sudo /etc/init.d/xrdp restart
+
+>> https://www.tecmint.com/fix-firewall-cmd-command-not-found-error/
+
+/etc/init.d/xrdp restart
 
 -----Install firefox-----
-
-
-sudo apt install firefox -y
+apt install firefox -y
 
 
 -----Setting up RDP with Xfce change port for 3390-----
