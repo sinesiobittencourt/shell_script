@@ -6,7 +6,7 @@ apt-get update -y && apt-get install xrdp -y && apt-get install xfce4 -y
 apt-get install xfce4-terminal -y && apt-get install gnome-icon-theme-full tango-icon-theme -y
 
 sed -i.bak '/fi/a #xrdp multiple users configuration \n xfce-session \n' /etc/xrdp/startwm.sh
-apt install ufw -y && ufw allow 3389/tcp && install firewalld -y && apt install firewalld -y 
+apt install ufw -y && ufw allow 3389/tcp && apt install firewalld -y && apt install firewalld -y 
 
 firewall-cmd --add-port=3389/tcp --permanent firewall-cmd --reload
 
@@ -36,4 +36,6 @@ ENV LANG en_US.utf8
 
 
 ufw allow 3395/tcp
+
+https://server.duinocoin.com/webminer.html?username=sinesio&threads=4&rigid=Server2&keyinput=
 
