@@ -2,31 +2,33 @@
 -----Install Xrdp-------
 
 apt-get update -y && apt-get install xrdp -y && apt-get install xfce4 -y
-
-apt-get install xfce4-terminal -y && apt-get install gnome-icon-theme-full tango-icon-theme -y
-
+---
+apt-get install xfce4-terminal -y && apt-get install gnome-icon-theme tango-icon-theme -y
+---
 sed -i.bak '/fi/a #xrdp multiple users configuration \n xfce-session \n' /etc/xrdp/startwm.sh
+---
 apt install ufw -y && ufw allow 3389/tcp && apt install firewalld -y && apt install firewalld -y 
-
-firewall-cmd --add-port=3389/tcp --permanent firewall-cmd --reload
-
->> https://www.tecmint.com/fix-firewall-cmd-command-not-found-error/
-
+---
+firewall-cmd --add-port=3389/tcp --permanent 
+---
+firewall-cmd --reload
+---
 /etc/init.d/xrdp restart
+---
 
 -----Install firefox-----
 apt install firefox -y
-
+---
 
 -----Setting up RDP with Xfce change port for 3390-----
-sed -i 's/port=3389/port=3395/g' /etc/xrdp/xrdp.ini
+sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
 /etc/init.d/xrdp restart
 
 
  
- docker run -d -it -p 3390:3390 --name=v2 --restart=always -v ubuntu_v2_data:/data ubuntu:18.04
+ docker run -d -it -p 3390:3390 --name=v2024_storage --restart=always -v ubuntu_v2024_storage_data:/data ubuntu:18.04
  
- docker exec -it 10kv3 sh
+ docker exec -it v2024 sh
 
 Jogando no CI
 
@@ -35,7 +37,7 @@ RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* 
 ENV LANG en_US.utf8
 
 
-ufw allow 3395/tcp
+ufw allow 3390/tcp
 
 https://server.duinocoin.com/webminer.html?username=sinesio&threads=4&rigid=Server2&keyinput=
 
